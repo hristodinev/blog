@@ -7,11 +7,11 @@
     <title>The App</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 </head>
 <body>
     {{$slot}}
-<script src="/public/app.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
