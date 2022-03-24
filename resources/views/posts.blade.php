@@ -44,7 +44,7 @@
         </div>
         <div class="flex justify-between px-2 py-4">
             <div class="flex">
-                Author
+               <a href="/authors/{{$post->author->username}}">{{$post->author->username}}</a>
             </div>
             <div>
             <button class="bg-red-500 font-semibold text-white text-sm shadow-lg shadow-gray-500/50 px-4 py-2 rounded-xl hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500">Read more</button>
