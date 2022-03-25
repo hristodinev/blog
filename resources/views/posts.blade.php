@@ -27,7 +27,9 @@
                 </span>
                 <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
                 <form method="GET">
-                    <input type="text" name="search" placeholder="Find me something" class="bg-transparent text-sm placeholder-black font-semibold">
+                    <input type="text" name="search" placeholder="Find me something" 
+                    class="bg-transparent text-sm placeholder-black font-semibold"
+                    value="{{request('search')}}">
                 </form>
                 </span>
             </div>
