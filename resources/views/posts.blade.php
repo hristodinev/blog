@@ -5,13 +5,18 @@
                   <span class="text-red-500">#</span>  Latest from <span class="text-red-500">the blog</span>
                 </h1>
                 <div class="tw-flex tw-justify-center mt-8 space-x-3">
-                <span class="bg-gray-200 inline-block rounded-xl">
-                <select class= "appereance-none bg-transparent py-2 px-5 text-sm font-semibold">
-                    <option value='Category' selected>Category</option>
-                    @foreach($categories as $cat)
-                        <option value= {{$cat->slug}}>{{$cat->name}}</option>
-                    @endforeach
-                </select>
+                <span class="bg-gray-200 inline-block rounded-xl w-32">
+                    <div x-data="{show: false}"@click.away="show=false">
+                        <button @click="show=! show" class="py-2 px-5 text-sm font-semibold">Categories</button>
+                        <div style="display:none;" x-show="show" class="py-2 absolute bg-gray-200 rounded-xl w-32 text-left">
+                        @foreach($categories as $category)
+                            <a href="/categories/{{$category->slug}}"
+                            class="block text-left px-3 text-sm leading-6 hover:bg-gray-300"
+                            >{{$category->name}}
+                        </a>
+                        @endforeach
+                        </div>
+                    </div>
                 </span>
                 <span class="bg-gray-200 inline-block rounded-xl">
                 <select class= "appereance-none bg-transparent py-2 px-5 text-sm font-semibold">

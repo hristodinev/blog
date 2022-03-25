@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 </head>
 <body>
     <x-header/>
     {{$slot}}
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
