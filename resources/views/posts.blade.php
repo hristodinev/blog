@@ -10,7 +10,7 @@
                         <button @click="show=! show" class="py-2 px-5 text-sm font-semibold">Categories</button>
                         <div style="display:none;" x-show="show" class="py-2 absolute bg-gray-200 rounded-xl w-32 text-left">
                         @foreach($categories as $category)
-                            <a href="/categories/{{$category->slug}}"
+                            <a href="/?category={{$category->slug}}"
                             class="block text-left px-3 text-sm leading-6 hover:bg-gray-300"
                             >{{$category->name}}
                         </a>
