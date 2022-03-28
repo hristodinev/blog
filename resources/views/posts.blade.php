@@ -5,20 +5,8 @@
                   <span class="text-red-500">#</span>  Latest from <span class="text-red-500">the blog</span>
                 </h1>
                 <div class="tw-flex tw-justify-center mt-8 space-x-3">
-                <span class="bg-gray-200 inline-block rounded-xl w-32">
-                    <div x-data="{show: false}"@click.away="show=false">
-                        <button @click="show=! show" class="py-2 px-5 text-sm font-semibold">Categories</button>
-                        <div style="display:none;" x-show="show" class="py-2 absolute bg-gray-200 rounded-xl w-32 text-left">
-                        @foreach($categories as $category)
-                            <a href="/?category={{$category->slug}}"
-                            class="block text-left px-3 text-sm leading-6 hover:bg-gray-300"
-                            >{{$category->name}}
-                        </a>
-                        @endforeach
-                        </div>
-                    </div>
-                </span>
-                </span>
+               
+                <x-category-dropdown />
                 <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
                 <form method="GET">
                     <input type="text" name="search" placeholder="Find me something" 
@@ -45,7 +33,7 @@
         </div>
         <div class="flex justify-between px-2 py-4">
             <div class="flex">
-               <a href="/authors/{{$post->author->username}}">{{$post->author->username}}</a>
+               <a href="/?author={{$post->author->username}}">{{$post->author->username}}</a>
             </div>
             <div>
             <button class="bg-red-500 font-semibold text-white text-sm shadow-lg shadow-gray-500/50 px-4 py-2 rounded-xl hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500">Read more</button>
