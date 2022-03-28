@@ -21,9 +21,9 @@
     <article class="max-w-5xl mx-auto border border-black-200 rounded-lg shadow-lg shadow-gray-500/50">
         <img class="mb-5 rounded-lg shadow-lg shadow-gray-500/50" src="https://picsum.photos/1024/300" alt="" srcset="">
         <span class="text-sm text-red-500 border-b-4 border-black-300 font-semibold px-5 py-3">
-            <a href="/categories/{{$post->category->slug}}">{{$post->category->name}}</a>
+            <a href="/?category={{$post->category->slug}}">{{$post->category->name}}</a>
         </span>
-        <h1 class="flexfont-bold text-4xl px-3 py-5 mt-5">
+        <h1 class="flex font-bold text-4xl px-3 py-5 mt-5">
             <a href="/posts/{{$post->slug}}">
            {{$post->title}}
             </a>    
@@ -38,7 +38,7 @@
                </a>
             </div>
             <div>
-            <button class="bg-red-500 font-semibold text-white text-sm shadow-lg shadow-gray-500/50 px-4 py-2 rounded-xl hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500">Read more</button>
+            <a href="{{route('show', $post)}}" class="bg-red-500 font-semibold text-white text-sm shadow-lg shadow-gray-500/50 px-4 py-2 rounded-xl hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-500">Read more</a>
             </div>
         </div>
     </article>
