@@ -18,12 +18,6 @@
                         </div>
                     </div>
                 </span>
-                <span class="bg-gray-200 inline-block rounded-xl">
-                <select class= "appereance-none bg-transparent py-2 px-5 text-sm font-semibold">
-                    <option value='Category' selected>Other Rules</option>
-                    <option value='Comment'>Comment</option>
-                    <option value= 'Author'>Author</option>                
-                </select>
                 </span>
                 <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
                 <form method="GET">
