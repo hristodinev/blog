@@ -9,10 +9,26 @@
             <a class="font-semibold text-lg uppercase" href="/">Home</a>
             <a class="font-semibold text-lg uppercase ml-4" href="#">About</a>
             <a class="font-semibold text-lg uppercase ml-4" href="#">Contact</a>
-            <a class="font-semibold text-lg uppercase ml-4" href="#">Login</a>
         </div>
         <div class="flex w-32 py-4 px-4">
             <a class="font-semibold text-sm uppercase ml-4 bg-red-600 text-white px-2 py-2" href="#">Subscribe</a>
         </div> 
     </nav>
 </section>
+<header class="mt-10 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl font-semibold">
+                  <span class="text-red-500">#</span>  Latest from <span class="text-red-500">the blog</span>
+                </h1>
+                <div class="tw-flex tw-justify-center mt-8 space-x-3">
+               
+                <x-category-dropdown />
+                <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
+                <form method="GET">
+                    <input type="text" name="search" placeholder="Find me something" 
+                    class="bg-transparent text-sm placeholder-black font-semibold"
+                    value="{{request('search')}}">
+                </form>
+                </span>
+            </div>
+</header>

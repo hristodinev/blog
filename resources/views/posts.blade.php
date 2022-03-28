@@ -1,21 +1,4 @@
 <x-layout>
-<header class="mt-10 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl font-semibold">
-                  <span class="text-red-500">#</span>  Latest from <span class="text-red-500">the blog</span>
-                </h1>
-                <div class="tw-flex tw-justify-center mt-8 space-x-3">
-               
-                <x-category-dropdown />
-                <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
-                <form method="GET">
-                    <input type="text" name="search" placeholder="Find me something" 
-                    class="bg-transparent text-sm placeholder-black font-semibold"
-                    value="{{request('search')}}">
-                </form>
-                </span>
-            </div>
-</header>
       @foreach($posts as $post)
 <main class="mt-12 px-3 py-5">
     <article class="max-w-5xl mx-auto border border-black-200 rounded-lg shadow-lg shadow-gray-500/50">
@@ -43,7 +26,7 @@
         </div>
     </article>
       @endforeach
-      <div class="mt-20">
+      <div class="mt-20 max-w-5xl mx-auto">
       {{$posts->links()}}
       </div>
       
