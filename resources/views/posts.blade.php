@@ -41,6 +41,10 @@
         </div>
     </article>
       @endforeach
+      <div class="mt-20">
+      {{$posts->links()}}
+      </div>
+      
 </main>
 </x-layout>
 
