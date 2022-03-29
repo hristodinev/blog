@@ -17,14 +17,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $categories= Category::factory()->create(
-            [
-                'name'=>'Business', 
-                'slug'=> 'business'
-            ]
-            );
-         
+         User::factory(10)->create();     
          Post::factory(10)->create();
-         
+         Category::factory(5)->create();
     }
 }
