@@ -1,34 +1,36 @@
-<section class="px-4 py-2 bg-white sticky top-0 z-50 shadow-lg shadow-gray-500/50">
-    <nav class="flex items-center"> 
-        <div class="flex-none w-20 h-14 px-3 py-2">
-            <h2 class="font-bold uppercase">
-                <img class="h-8" src="{{url('/img/dot-logo.png')}}" alt="The logo" srcset="">
-            </h2>
-        </div>
-        <div class="flex mx-auto w-60 items-center px-5 py-3">
-            <a class="font-semibold text-lg uppercase" href="/">Home</a>
-            <a class="font-semibold text-lg uppercase ml-4" href="#">About</a>
-            <a class="font-semibold text-lg uppercase ml-4" href="#">Contact</a>
-        </div>
-        <div class="flex w-32 py-4 px-4">
-            <a class="font-semibold text-sm uppercase ml-4 bg-red-600 text-white px-2 py-2" href="#">Subscribe</a>
-        </div> 
-    </nav>
-</section>
-<header class="mt-10 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl font-semibold">
-                  <span class="text-red-500">#</span>  Latest from <span class="text-red-500">the blog</span>
-                </h1>
-                <div class="tw-flex tw-justify-center mt-8 space-x-3">
-               
-                <x-category-dropdown />
-                <span class="bg-gray-200 inline-block rounded-xl py-2 px-5 ">
-                <form method="GET">
-                    <input type="text" name="search" placeholder="Find me something" 
-                    class="bg-transparent text-sm placeholder-black font-semibold"
-                    value="{{request('search')}}">
-                </form>
-                </span>
-            </div>
-</header>
+<nav id="header" class="fixed w-full z-10 top-0">
+
+		<div id="progress" class="h-1 z-20 top-0" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+
+		<div class="w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3">
+
+			<div class="pl-4">
+				<a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl" href="#">
+					Hristo Dinev
+				</a>
+			</div>
+
+			<div class="block lg:hidden pr-4">
+				<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-green-500 appearance-none focus:outline-none">
+					<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+						<title>Menu</title>
+						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+					</svg>
+				</button>
+			</div>
+
+			<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20" id="nav-content">
+				<ul class="list-reset lg:flex justify-end flex-1 items-center">
+					<li class="mr-3">
+						<a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="#">Home</a>
+					</li>
+					<li class="mr-3">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">About</a>
+					</li>
+					<li class="mr-3">
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
