@@ -1,7 +1,7 @@
 <x-layout>
-      @foreach($posts as $post)
 <main class="mt-12 px-3 py-5">
-    <article class="max-w-5xl mx-auto border border-black-200 rounded-lg shadow-lg shadow-gray-500/50">
+      @foreach($posts as $post)
+    <article class="max-w-5xl mt-10 mx-auto border border-black-200 rounded-lg shadow-lg shadow-gray-500/50">
         <img class="mb-5 rounded-lg shadow-lg shadow-gray-500/50" src="https://picsum.photos/1024/300" alt="" srcset="">
         <span class="text-sm text-red-500 border-b-4 border-black-300 font-semibold px-5 py-3">
             <a href="/?category={{$post->category->slug}}">{{$post->category->name}}</a>
