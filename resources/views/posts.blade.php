@@ -8,17 +8,19 @@
         </div>
 		<ul>
         @foreach($posts as $post)
-        <li class="py-4">
+        <li class="py-4  border-t-2 mb-7">
             <article class="space-y-2 px-3 xl:grid xl:grid-cols-6 xl:items-baseline xl:space-y-0">
                 <div class="space-y-2 xl:col-span-2">
                 {{ \Carbon\Carbon::parse($post->created_at)->format(' jS \of F Y') }} 
                 </div>
                 <div class="space-y-3 xl:col-span-4">
                     <div>
-                    <h3 class="text-2xl font-bold leading-8 tracking-tight">{{$post->title}}</h3>
+                    <h3 class="text-2xl font-bold leading-8 tracking-tight">
+                    <a href="/posts/{{$post->slug}}">{{$post->title}}</a>    
+                    </h3>
                     </div>
                     <span class=" text-sm font-medium uppercase text-green-500">
-                        {{$post->category->name}}
+                    <a href="/?category={{$post->category->slug}}">{{$post->category->name}}</a>
                     </span>
                     <div class="prose max-w-none text-gray-500">
                         {{$post->intro}}
@@ -29,18 +31,8 @@
         @endforeach
         </ul>
 		<!--Next & Prev Links-->
-		<div class="font-sans flex justify-between content-center px-4 pb-12 mt-10">
-			<div class="text-left">
-				<span class="text-xs md:text-sm font-normal text-gray-600">&lt; Previous Post</span><br>
-				<p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Blog title</a></p>
-			</div>
-			<div class="text-right">
-				<span class="text-xs md:text-sm font-normal text-gray-600">Next Post &gt;</span><br>
-				<p><a href="#" class="break-normal text-base md:text-sm text-green-500 font-bold no-underline hover:underline">Blog title</a></p>
-			</div>
-		</div>
+		{{ $posts->links() }}
 		<!--/Next & Prev Links-->
-        <x-subscribe_mail />
 	</div>
 	<!--/container-->
 

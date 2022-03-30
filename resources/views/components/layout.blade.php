@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
+    @livewireStyles
 </head>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -62,5 +63,6 @@
 			document.getElementById("nav-content").classList.toggle("hidden");
 		}
 	</script>
+    @livewireScripts
 </body>
 </html>
