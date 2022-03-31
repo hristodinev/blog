@@ -30,7 +30,7 @@
         </li>
         @endforeach
         </ul>
-        <div class="mt-10">
+        <div class="mb-10">
             <!--Next & Prev Links-->
 		{{ $posts->links() }}
 		<!--/Next & Prev Links-->
