@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
@@ -20,11 +21,7 @@ Route::get('/', [PostController::class, 'index'])->name('home');
  
 Route::get('posts/{post:slug}', [PostController::class, 'show'])->name('show');
 
-Route::get('/tags', function(){
-    return view('tags', [
-        'tags'=>Category::all()
-    ]);
-});
+Route::get('/tags', [CategoryController::class, 'index'])->name('tags');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
