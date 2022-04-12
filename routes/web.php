@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,8 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('posts/{post:slug}', [PostController::class, 'show'])->name('show');
 
 Route::get('/tags', [CategoryController::class, 'index'])->name('tags');
+
+Route::get('/about', [PagesController::class, 'about'])->name('about');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
