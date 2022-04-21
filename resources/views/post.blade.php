@@ -4,7 +4,7 @@
 
     <div class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
 
-    
+
 			<!--Title-->
 			<div class="font-sans">
 				<p class="text-base md:text-sm text-green-500 font-bold">&lt; <a href="{{route('home')}}" class="text-base md:text-sm text-green-500 font-bold no-underline hover:underline">BACK TO BLOG</a></p>
@@ -38,6 +38,20 @@
 
 		<!--Divider-->
 		<hr class="border-b-2 border-gray-400 mb-8 mx-4">
-
+        <section class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
+            <form action="#" method="POST">
+                @csrf
+                <header class="flex items-center pb-4">
+                    <h2 class="py-4 px-3">Want to participate?</h2>
+                </header>
+                <div class="py-4 px-3">
+                    <textarea name="comment_body" class="w-full text-sm focus:outline-none focus:ring" cols="30" rows="10" placeholder="Your comment ..."></textarea>
+                </div>
+                <footer class="py-4 px-3">
+                    <button type="submit" class="bg-green-500 text-white py-2 px-4 text-sm rounded-2xl">Post</button>
+                </footer>
+            </form>
+        </section>
+        <x-post-comment />
     </div>
 </x-layout>

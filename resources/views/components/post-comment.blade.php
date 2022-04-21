@@ -1,6 +1,6 @@
-<article class="flex bg-gray-100 rounded-xl">
-                <div class="px-3 py-3 shrink-0">
-                    <img class="rounded-xl flex space-x-4" src="https://i.pravatar.cc/60" alt="" srcset="">
+<article class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
+                <div class="px-3 py-3 shrink">
+                    <img class="rounded-xl flex space-x-4" src="#" alt="" srcset="">
                 </div>
                 <div class="py-3">
                     <header>
