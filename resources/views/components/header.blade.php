@@ -25,7 +25,7 @@
 						<a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="{{route('home')}}">Home</a>
 					</li>
 					<li class="mr-3">
-						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="#">About</a>
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="{{route('about')}}">About</a>
 					</li>
 					<li class="mr-3">
 						<a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4" href="{{route('tags')}}">Tags</a>
