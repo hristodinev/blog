@@ -38,6 +38,7 @@
 
 		<!--Divider-->
 		<hr class="border-b-2 border-gray-400 mb-8 mx-4">
+        @auth()
         <section class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
             <form action="/posts/{{$post->slug}}/comments" method="POST">
                 @csrf
@@ -52,6 +53,7 @@
                 </footer>
             </form>
         </section>
+        @endauth()
         <section class="col-span-8 col-start-5 mt-10 space-y-6 mb-2">
         @foreach($comments as $comment)
             <x-post-comment :comment="$comment" />
