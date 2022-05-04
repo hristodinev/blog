@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostController;
 use App\Models\Category;
@@ -25,6 +26,8 @@ Route::get('posts/{post:slug}', [PostController::class, 'show'])->name('show');
 Route::get('/tags', [CategoryController::class, 'index'])->name('tags');
 
 Route::get('/about', [PagesController::class, 'about'])->name('about');
+
+Route::post('posts/{post:slug}/comments',[CommentController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

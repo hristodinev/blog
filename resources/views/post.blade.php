@@ -39,7 +39,7 @@
 		<!--Divider-->
 		<hr class="border-b-2 border-gray-400 mb-8 mx-4">
         <section class="w-full px-4 md:px-6 text-xl text-gray-800 leading-normal">
-            <form action="#" method="POST">
+            <form action="/posts/{{$post->slug}}/comments" method="POST">
                 @csrf
                 <header class="flex items-center pb-4">
                     <h2 class="py-4 px-3">Want to participate?</h2>
@@ -52,6 +52,9 @@
                 </footer>
             </form>
         </section>
-        <x-post-comment />
+        <section class="col-span-8 col-start-5 mt-10 space-y-6 mb-2">
+        @foreach($comments as $comment)
+            <x-post-comment :comment="$comment" />
+        @endforeach
     </div>
 </x-layout>
