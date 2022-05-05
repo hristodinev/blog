@@ -21,7 +21,7 @@ class PostController extends Controller
     public function show(Post $post){
         return view('post', [
             'post'=>$post,
-            'comments'=>Comment::all()
+            'comments'=>Comment::where('post_id', $post->id)->get()
         ]);
     }
 }
