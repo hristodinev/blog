@@ -46,7 +46,10 @@
                     <h2 class="py-4 px-3">Want to participate?</h2>
                 </header>
                 <div class="py-4 px-3">
-                    <textarea name="comment_body" class="w-full text-sm focus:outline-none focus:ring" cols="30" rows="10" placeholder="Your comment ..."></textarea>
+                    <textarea name="comment_body" class="w-full text-sm focus:outline-none focus:ring" cols="30" rows="10" placeholder="Your comment ..." required></textarea>
+                  @error('comment_body')
+                    <span class="text-xs text-red-700">{{$message}}</span>
+                  @enderror
                 </div>
                 <footer class="py-4 px-3">
                     <button type="submit" class="bg-green-500 text-white py-2 px-4 text-sm rounded-2xl">Post</button>
