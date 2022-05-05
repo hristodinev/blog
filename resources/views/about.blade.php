@@ -17,5 +17,5 @@
         </div>
         </div>
     </main>
-    </div>ssß
+    </div>
 </x-layout>
